@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Grid, Typography } from "@material-ui/core";
 import { DummyListItem } from "./../../types/types";
-import { dummyListData } from "./../../types/constants";
 import { format } from "date-fns";
 import "./List.css";
 
@@ -12,17 +11,29 @@ interface ListProps {
 const List: React.FC<ListProps> = (props) => {
   const [orderBy, setOrderBy] = useState("name");
 
-  const list = dummyListData
-    .filter((x) =>
-      x.name.toLowerCase().includes(props.searchTerm?.toLowerCase() ?? "")
-    )
-    .sort((a, b) => (a[orderBy] > b[orderBy] ? 1 : -1));
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/charts")
+      .then((httpResponse) => httpResponse.json())
+      .then((response) => {
+        setList(
+          response.charts
+            .filter((x) =>
+              x.name
+                .toLowerCase()
+                .includes(props.searchTerm?.toLowerCase() ?? "")
+            )
+            .sort((a, b) => (a[orderBy] > b[orderBy] ? 1 : -1))
+        );
+      });
+  }, [orderBy, props.searchTerm]);
 
   return (
     <div className="root">
       <Grid
         container
-        justify="space-between"
+        justifyContent="space-between"
         alignItems="center"
         className="header"
       >
@@ -76,8 +87,13 @@ const List: React.FC<ListProps> = (props) => {
           </Typography>
         </Grid>
       </Grid>
-      {list.map((item: DummyListItem) => (
-        <Grid container justify="space-between" alignItems="center">
+      {list.map((item: DummyListItem, index: number) => (
+        <Grid
+          key={index}
+          container
+          justifyContent="space-between"
+          alignItems="center"
+        >
           <Grid item xs={6}>
             <Typography variant="body1">{item.name}</Typography>
           </Grid>

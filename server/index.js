@@ -1,6 +1,6 @@
-import { DummyListItem } from "./types";
+const express = require("express");
 
-export const dummyListData: Array<DummyListItem> = [
+const dummyListData = [
   {
     name: "Chart 1",
     created_at: 1631530148312,
@@ -27,3 +27,15 @@ export const dummyListData: Array<DummyListItem> = [
     modified_at: 1622453396409,
   },
 ];
+
+const PORT = 3001;
+
+const app = express();
+
+app.get("/api/charts", (req, res) => {
+  res.json({ charts: dummyListData });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server listening on ${PORT}`);
+});

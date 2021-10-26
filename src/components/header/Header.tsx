@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = (props) => {
   return (
     <Toolbar>
       <Grid container>
-        <Grid container spacing={1} justify="space-between" alignItems="center">
+        <Grid container spacing={1} justifyContent="space-between" alignItems="center">
           <Grid item>
             <TextField
               placeholder="Search charts"
