@@ -6,9 +6,9 @@
 In this assigment you need to implement a E2E testing of your taste based on a preexisting micro application. Instructions on how to run the micro application can be found right below.
 Please take your time with the assignment, we think it should not take more than 6 hours. 
 
-### Micro application
+### `My Charts` Micro application
 
-The micro application consists of a 
+Charts are a central piece of our platform. `My Charts` is a small app that allows you to view your existing charts. This micro application consists of a 
 - dummy server with a single endpoint and 
 - a 3-page web interface where the e2e testing should only take place on the first page  
 
@@ -28,8 +28,11 @@ We prefer using the cypress e2e framework but any tool of choice would do.
 
 ### QA Testing challenge
 
+Provide Functional E2E test suite using your UI automation framework of choice. 
+
 Note that we have omitted a lot of details in this description on what kind of tests should be implemented and how. 
-We hope you will fill these details in and prove to us that you are aware of industry best practices and that you also follow them. Get creative as much as you want, we WILL appreciate it. You will be evaluated based on how sensible your solution will be. 
+We hope you will fill these details in and prove to us that you are aware of industry best practices and that you also follow them. In your code, we would like to see your code structure, test design, and test strategy.
+
 In case you are not able to implement something you would normally implement for time reasons, make it clear with a comment.
 Feel free to ask questions if something is not clear, please give your best shot on this task.
 
