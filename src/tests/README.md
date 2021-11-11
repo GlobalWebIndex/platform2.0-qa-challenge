@@ -16,7 +16,7 @@ In order to execute https://github.com/GlobalWebIndex/platform2.0-qa-challenge a
 
 
 
-### The initial implementation of testing includes 10 scenaria that can be found [here](https://github.com/ledakaradimou/platform2.0-qa-challenge_LK/blob/main/src/tests/cypress/integration/test-LK/tests_page1.spec.js):
+### The initial implementation of testing includes 10 scenaria that can be found on /src/tests/cypress/integration/test-LK/tests_page1.spec.js :
 1. This checks that the page is loading successfully, and the header is visible
 2. This tests that the search bar, the header, and the Create button are as expected in the top bar; the header contains the title 'Charts', the button contains the text 'Create' and the search bar is visible.
 3. This tests that the header of the table is as expected. The titles of the three columns are verified.
@@ -29,8 +29,8 @@ In order to execute https://github.com/GlobalWebIndex/platform2.0-qa-challenge a
 10. This tests than once we click on the 'Create' button we move to page 2, and from there that we can move back. 
 
 
-### The reports of the tests can be found [here](https://github.com/ledakaradimou/platform2.0-qa-challenge_LK/tree/main/src/tests/cypress/reports/mocha)
-### Moreover, a video of the execution can be found [here](https://github.com/ledakaradimou/platform2.0-qa-challenge_LK/tree/main/src/tests/cypress/videos/test-LK)
+### The reports of the tests can be found on /src/tests/cypress/reports/mocha
+### Moreover, a video of the execution can be found on /src/tests/cypress/videos/test-LK
 
 ### Further tests to be included and other improvements:
 1. The tests related to sorting need to be improved significantly
