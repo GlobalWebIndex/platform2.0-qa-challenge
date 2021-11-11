@@ -1,0 +1,24 @@
+{
+  "name": "cypresstesting",
+  "version": "1.0.0",
+  "description": "initial testing for page 1 - attempt using cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "generate-report": "merge cypress/reports/mocha/mochawesome.json -f report -o cypress/reports/mochareports"
+  },
+  "author": "Lida Karadimou",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^8.7.0"
+  },
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.8",
+    "cypress-multi-reporters": "^1.5.0",
+    "cypress-xpath": "^1.6.2",
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.0",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^6.0.0"
+  }
+}
